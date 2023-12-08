@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;700&family=Open+Sans:wght@300;400&display=swap');
+
+:root{
+    --backgroundHeader: radial-gradient(circle at 0 100%, rgba(250, 150, 18, 0.904), rgba(223, 35, 51, 0.932), rgba(173, 48, 58, 0.945), rgba(119, 33, 40, 0.486), rgba(11, 10, 90, 0.144) 45%),
+    radial-gradient(ellipse 2% 70% at 90% 15%, rgba(255, 255, 255, 0.705), #ddddddb2, rgb(60, 58, 122), rgba(6, 3, 48, 0.623) 25%),
+    radial-gradient(ellipse 15% 3% at 90% 15%, white, rgb(255, 255, 255), #ddd, rgb(60, 58, 122), rgba(6, 3, 48, 0.623) 35%),
+    radial-gradient(circle at 90% 15%, #ddd, rgb(60, 58, 122), rgba(6, 3, 48, 0.623) 25%),
+    radial-gradient(ellipse 100% 60% at 50% 50%, rgba(96, 64, 172, 0.945), rgba(6, 12, 66, 0.884) 90%),
+    radial-gradient(ellipse 100% 40% at 50% 30%, rgb(37, 32, 170), rgb(6, 3, 48) 80%),
+    radial-gradient(ellipse 100% 100% at 50% 50%,rgba(80, 33, 165, 0.459),rgba(80, 33, 165, 0.459), rgba(14, 9, 87, 0.616) 100%),
+    radial-gradient(ellipse 100% 60% at 50% 0, rgb(18, 15, 88), rgb(0, 0, 0) 100%);
+    --backgroundBody:radial-gradient(circle at 0 100%, rgb(18, 15, 88), rgba(6, 12, 66, 0.884) 45%),
+    radial-gradient(ellipse 2% 70% at 90% 15%, rgb(18, 15, 88), rgb(0, 0, 0) 25%),
+    radial-gradient(ellipse 15% 3% at 90% 15%, rgba(80, 33, 165, 0.459),rgba(80, 33, 165, 0.459), rgba(14, 9, 87, 0.616) 35%),
+    radial-gradient(circle at 90% 15%, rgba(80, 33, 165, 0.459),rgba(80, 33, 165, 0.459), rgba(14, 9, 87, 0.616) 25%),
+    radial-gradient(ellipse 100% 60% at 50% 50%, rgba(96, 64, 172, 0.945), rgba(6, 12, 66, 0.884) 90%),
+    radial-gradient(ellipse 100% 40% at 50% 30%, rgb(37, 32, 170), rgb(6, 3, 48) 80%),
+    radial-gradient(ellipse 100% 100% at 50% 50%,rgba(80, 33, 165, 0.459),rgba(80, 33, 165, 0.459), rgba(14, 9, 87, 0.616) 100%),
+    radial-gradient(ellipse 100% 60% at 50% 0, rgb(18, 15, 88), rgb(0, 0, 0) 100%);
+    --gradientBorder: linear-gradient(rgb(37, 32, 170), rgb(6, 3, 48), rgba(14, 9, 87, 0.568), rgba(255, 255, 255, 0));
+    --reverseGradBrdr: linear-gradient(rgba(255, 255, 255, 0), rgba(14, 9, 87, 0.568), rgb(6, 3, 48), rgb(37, 32, 170));
+    --standardFont: 'Kanit', 'Open Sans', sans-serif;
+    --text-Shadow: 0.03em 0.025em 0.07em #ddd, 
+    1px 0px 0px rgb(38, 21, 80),
+    0px -1px 0px rgb(30, 30, 66),
+    0px 1px 0px rgb(69, 20, 206);
+    --lightWhite: rgba(128, 128, 128, 0.733);
+}
+
+
+html{
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: var(--standardFont);
+    background: var(--backgroundBody);
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    margin: 0;
+}
+
+button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    font-family: var(--standardFont);
+    font-size: 1rem;
+    padding: 0;
+}
+
+header{
+    position: fixed;
+    display: flex;
+    z-index: 999;
+    bottom: 0;
+    right: 0;
+    margin: 0.5rem;
+
+}
+
+#home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: var(--backgroundHeader);
+    background-position: center;
+    background-size: cover;
+}
+
+#home .head{
+    position: absolute;
+    font-weight: normal;
+    font-size: 3.25rem;
+    text-shadow: var(--text-Shadow);
+    top: 45%;
+    
+}
+
+nav{
+    display: flex;
+    position: relative;
+    height: 1.5rem;  
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-right: 1rem;
+}
+
+.links {
+    cursor: pointer;
+    width: 100%;
+    height: 20px;
+    margin-right: 16px;
+    color: var(--lightWhite);
+    transition: color 0.15s ease-in-out;
+}
+
+.links.last {
+    margin-right: 0; 
+}
+
+.links:hover{
+    color: white;
+}
+
+.dropdown{
+    position: relative;
+}
+
+.projects{
+    position: absolute;
+    opacity: 0;
+    top: -485%;
+    left: -80%;
+    background-color: rgba(1, 1, 39, 0.692);
+    pointer-events: none;
+    padding: .5rem;
+    border-radius: .5rem;
+    box-shadow: 0 2px 5px 0 rgba(255, 255, 255, 0.1);
+    width: -moz-fit-content;
+    width: fit-content;
+    transition: opacity 250ms ease-in-out;
+}
+
+.projects a{
+    display: flex;
+    font-size: 0.8rem;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.projects a:hover {
+    text-decoration: underline;
+}
+
+.head p{
+    cursor: pointer;
+}
+
+.head p::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    top: 90%;
+    left: 5px;
+    background-color: #f7f9fa;
+    box-shadow: var(--text-Shadow);
+    transform-origin: right center;
+    transition: transform 0.25s ease-out;
+    z-index: 0;
+}
+
+.head p:hover::after {
+    transform: scaleX(1);
+    transform-origin: left center;
+}
+
+.name {
+    position: absolute;
+    display: flex;
+    height: auto;
+    left: 5px;
+    top: 0;
+    z-index: 999;
+}
+
+.name p{
+    font-size: 1.5rem;
+    text-shadow: var(--text-Shadow);
+}
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100vh;
+    float: left;
+}
+
+.main div {
+    display: block;
+    box-sizing: border-box; 
+}
+
+.about {
+    width: 70%;
+    margin: 1rem;
+}
+.about, .github-link{
+    height: 45%;
+}
+
+.about p, h2{
+    margin: 5px;
+}
+
+
+.github-link {
+    width: 30%;
+    text-align: center;
+    line-height: 15rem;
+    font-size: 2rem;
+}
+
+.github-link a{
+    font-style:oblique;
+    text-shadow: var(--text-Shadow);
+}
+
+.github-link a:hover{
+    text-decoration: underline;
+}
+
+.project-highlights {
+    height: 55%;
+    width: 100%;
+    border-image: var(--reverseGradBrdr) 30;
+}
+
+.project-highlights h2 {
+    margin-left: 1rem;
+}
+
+.project-highlights div {
+    border: none;
+}
+
+.project-highlights a{
+    font-style:oblique;
+    text-shadow: var(--text-Shadow);
+}
+
+.project-highlights a:hover{
+    text-decoration: underline;
+}
+
+/* Project Page */
+
+.project {
+    position: relative;
+    margin: .5rem;
+}
+
+
+
+
+/* Animations */
+
+.fades{
+    visibility: hidden;
+}
+
+@keyframes fade-in {
+    from {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    1%{
+        visibility: visible;
+        opacity: 0;
+    }
+    to {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.fade-in{
+    animation: fade-in 200ms ease-in-out forwards;
+}
+
+@keyframes fade-out {
+    from {
+        visibility: visible; 
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    99% {
+        visibility: visible;
+        opacity: 0;
+    }
+    to {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+.fade-out{
+    animation: fade-out 200ms ease-in-out forwards;
+}
