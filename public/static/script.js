@@ -2,18 +2,27 @@ const projectsBtn = document.getElementById('projects');
 const dropdownDivProjects = document.getElementById('projects-dropdown');
 const projectsDropdown = document.getElementById('dropdown');
 const dropdownLinks =  projectsDropdown.querySelectorAll('a');
+const vidBtns = document.querySelectorAll('.vid-btn');
+const videos = document.querySelectorAll('video');
+const aLinks = document.querySelectorAll('a')
 
-// projectsBtn.addEventListener('mouseover', function () {
-//     console.log("Hey")
-//     fadeIn();
-// });
 
-// dropdownDivProjects.addEventListener('mouseleave', function (event) {
-//     if (!event.relatedTarget || !event.relatedTarget.closest('#projects-dropdown')) {
-//         console.log("Hi")
-//         fadeOut();
-//     }
-// });
+
+aLinks.forEach((a)=> {
+    a.addEventListener('click', ()=> {
+        const vidDiv = document.getElementById(a.href.slice(-1));
+        const selectedVid = vidDiv.querySelector('video');
+        manageVideos();
+        selectedVid.play();
+        console.log(selectedVid)
+    })
+});
+
+const manageVideos = () => {
+    videos.forEach((video)=> {
+        video.pause();
+    })
+};
 
 const fadeIn = () => {
     projectsDropdown.style.pointerEvents = 'all';
