@@ -4,16 +4,16 @@ const projectsDropdown = document.getElementById('dropdown');
 const dropdownLinks =  projectsDropdown.querySelectorAll('a');
 const vidBtns = document.querySelectorAll('.vid-btn');
 const videos = document.querySelectorAll('video');
-const aLinks = document.querySelectorAll('a')
+const vidLinks = document.querySelectorAll('.vid-links a')
 
-
-
-aLinks.forEach((a)=> {
+vidLinks.forEach((a)=> {
     a.addEventListener('click', ()=> {
         const vidDiv = document.getElementById(a.href.slice(-1));
         const selectedVid = vidDiv.querySelector('video');
+        if (selectedVid) selectedVid.play();
         manageVideos();
-        selectedVid.play();
+        removeActiveClass();
+        a.classList.add('active');
         console.log(selectedVid)
     })
 });
@@ -23,6 +23,12 @@ const manageVideos = () => {
         video.pause();
     })
 };
+
+const removeActiveClass = () => {
+    vidLinks.forEach( (link) => {
+        link.classList.remove('active');
+    });
+}
 
 const fadeIn = () => {
     projectsDropdown.style.pointerEvents = 'all';
