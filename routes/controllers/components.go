@@ -52,56 +52,19 @@ const (
     <section class="main">
         <div class="about">
         <div class="vid-links">
-        <a href="#1">About Me</a>
-        <a href="#2">Professional Journey</a>
-        <a href="#3">Software Development Expertise</a>
-        <a href="#4">AWS Cloud and Technical Skills</a>
-        <a href="#5">Professional Details</a>
-        <a href="#6">Ongoing Commitment</a>
-        <a href="#7">Future Aspirations</a>
+        <a href="#1" class="active">Introduction</a>
+        <a href="#2">Skills & Experience in Software Development</a>
         </div>
     <div class="reels">
         <div class="reel" id="1">
-            <video class="videos" controls>
-                <source src="static/videos/portrait-video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <iframe id="yt-frame" class="videos youtube"
+                src="https://youtube.com/embed/RmItDzHF7cc?si=-Z9UXKE2mCxcRDvT?autoplay=1&mute=1">
+            </iframe>
         </div>
         <div class="reel" id="2">
-            <video class="videos" controls>
-                <source src="static/videos/portrait-video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        <div class="reel" id="3">
-            <video class="videos" controls>
-                <source src="static/videos/portrait-video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        <div class="reel" id="4">
-            <video class="videos" controls>
-                <source src="static/videos/portrait-video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        <div class="reel" id="5">
-            <video class="videos" controls>
-                <source src="static/videos/portrait-video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        <div class="reel" id="6">
-            <video class="videos" controls>
-                <source src="static/videos/portrait-video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        <div class="reel" id="7">
-            <video class="videos" controls>
-                <source src="static/videos/portrait-video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+        <iframe id="yt-frame" class="videos youtube"
+        src="https://youtube.com/embed/vSL8lxSuijg?si=VLZkpqA7LsxRyWlw?autoplay=1&mute=1">
+        </iframe>
         </div>
     </div>
             </div>
